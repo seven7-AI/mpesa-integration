@@ -40,18 +40,18 @@ config_till = MpesaConfig(
 config_paybill = MpesaConfig(
     consumer_key=os.getenv("MPESA_CONSUMER_KEY"),
     consumer_secret=os.getenv("MPESA_SECRET_KEY"),
-    shortcode="5536682",  # Account number
+    shortcode="174379",  # Account number
     passkey=os.getenv("MPESA_PASSKEY"),
     callback_url="https://your-domain.com/callback",
-    business_shortcode="522533",  # Business number
+    business_shortcode="174379",  # Business number
     environment="sandbox"
 )
 
 # Choose which config to use for the client
 # For example, using Paybill config:
-# client = MpesaClient(config_paybill)
+client = MpesaClient(config_paybill)
 # Or using Till config:
-client = MpesaClient(config_till)
+# client = MpesaClient(config_till)
 
 try:
     # Try to just get an access token first to isolate the issue
