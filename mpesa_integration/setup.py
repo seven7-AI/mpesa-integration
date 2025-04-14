@@ -1,4 +1,11 @@
 from setuptools import setup, find_packages
+import os
+
+# Get the directory of the current script
+current_dir = os.path.abspath(os.path.dirname(__file__))
+
+# Construct the path to the README.md file
+readme_path = os.path.join(current_dir, '..', 'README.md')
 
 setup(
     name="mpesa-integration",
@@ -10,7 +17,7 @@ setup(
     author="thought vision",
     author_email="arapbiisubmissions@gmail.com",
     description="A Python package for M-Pesa STK Push integration (Till and Paybill)",
-    long_description=open("README.md").read(),
+    long_description=open(readme_path, encoding='utf-8').read(),
     long_description_content_type="text/markdown",
     url="https://github.com/seven7-AI/mpesa-integration",
     classifiers=[
