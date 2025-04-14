@@ -49,9 +49,9 @@ config_paybill = MpesaConfig(
 
 # Choose which config to use for the client
 # For example, using Paybill config:
-client = MpesaClient(config_till)
+# client = MpesaClient(config_paybill)
 # Or using Till config:
-# client = MpesaClient(config_till)
+client = MpesaClient(config_till)
 
 try:
     # Try to just get an access token first to isolate the issue
