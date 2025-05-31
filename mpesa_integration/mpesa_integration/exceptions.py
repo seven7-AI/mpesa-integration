@@ -1,11 +1,11 @@
-class MpesaError(Exception):
-    """Base exception for M-Pesa errors."""
-    pass
-
-class MpesaAuthError(MpesaError):
+class MpesaAuthError(Exception):
     """Raised when authentication fails."""
     pass
 
-class MpesaPaymentError(MpesaError):
+class MpesaPaymentError(Exception):
     """Raised when payment initiation fails."""
+    pass
+
+class MpesaTransactionError(Exception):
+    """Raised when transaction status check fails."""
     pass
